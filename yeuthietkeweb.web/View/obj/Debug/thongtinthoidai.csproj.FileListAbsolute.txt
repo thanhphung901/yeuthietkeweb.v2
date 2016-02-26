@@ -1,0 +1,9 @@
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\THVDev.dll
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\THVDev.pdb
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\Controller.dll
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\Model.dll
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\Controller.pdb
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\bin\Model.pdb
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\obj\Debug\thongtinthoidai.csprojResolveAssemblyReference.cache
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\obj\Debug\THVDev.dll
+D:\PhongHT\Websites\dev\thongtinthoidai\thongtinthoidai\GiaNguyen\obj\Debug\THVDev.pdb

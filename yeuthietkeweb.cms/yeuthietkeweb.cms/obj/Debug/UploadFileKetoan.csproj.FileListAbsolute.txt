@@ -1,0 +1,4 @@
+D:\PhongHT\Websites\dev\dbShop\dbShop\bin\dbShop.dll
+D:\PhongHT\Websites\dev\dbShop\dbShop\bin\dbShop.pdb
+D:\PhongHT\Websites\dev\dbShop\dbShop\obj\Debug\dbShop.dll
+D:\PhongHT\Websites\dev\dbShop\dbShop\obj\Debug\dbShop.pdb

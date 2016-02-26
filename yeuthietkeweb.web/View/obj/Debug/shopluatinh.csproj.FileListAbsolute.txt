@@ -1,0 +1,9 @@
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\THVDev.dll
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\THVDev.pdb
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\Controller.dll
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\Model.dll
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\Controller.pdb
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\bin\Model.pdb
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\obj\Debug\shopluatinh.csprojResolveAssemblyReference.cache
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\obj\Debug\THVDev.dll
+D:\PhongHT\Websites\dev\shopluatinh\GiaNguyen\obj\Debug\THVDev.pdb

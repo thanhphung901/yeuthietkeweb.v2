@@ -1,0 +1,9 @@
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\obj\Debug\yeuthietkeweb.csprojResolveAssemblyReference.cache
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\yeuthietkeweb.dll
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\yeuthietkeweb.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\Controller.dll
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\Model.dll
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\Controller.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\bin\Model.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\obj\Debug\yeuthietkeweb.dll
+H:\SoftWeb\yeuthietkeweb.cms_v2.0\yeuthietkeweb.web\View\obj\Debug\yeuthietkeweb.pdb

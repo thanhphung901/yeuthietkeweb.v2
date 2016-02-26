@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yeuthietkeweb", "View\yeuthietkeweb.csproj", "{91A20496-DA04-4246-9492-3E4EF7F69DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{A559BB6D-EC09-4E9B-88C3-40893DF23721}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91A20496-DA04-4246-9492-3E4EF7F69DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A20496-DA04-4246-9492-3E4EF7F69DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A20496-DA04-4246-9492-3E4EF7F69DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A20496-DA04-4246-9492-3E4EF7F69DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1DABDD-1283-4F83-98FB-AFF7BBFAFFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A559BB6D-EC09-4E9B-88C3-40893DF23721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A559BB6D-EC09-4E9B-88C3-40893DF23721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A559BB6D-EC09-4E9B-88C3-40893DF23721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A559BB6D-EC09-4E9B-88C3-40893DF23721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

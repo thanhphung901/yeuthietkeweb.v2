@@ -1,0 +1,9 @@
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\THVDev.dll
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\THVDev.pdb
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\Controller.dll
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\Model.dll
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\Controller.pdb
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\bin\Model.pdb
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\obj\Debug\dichvuviettel.com.vn.csprojResolveAssemblyReference.cache
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\obj\Debug\THVDev.dll
+E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\obj\Debug\THVDev.pdb

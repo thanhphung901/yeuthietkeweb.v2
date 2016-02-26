@@ -1,0 +1,59 @@
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\bin\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\bin\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\obj\Debug\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\obj\Debug\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\vpro.functions.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\vpro.functions.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\vpro.functions.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\vpro.functions.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms _new\yeuthietkeweb.cms\bin\ComponentArt.Web.UI.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\vpro.functions.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+E:\WWW\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\ComponentArt.Web.UI.dll
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\bin\vpro.functions.pdb
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\myphamhanquoc\myphamhanquoc.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\bin\vpro.functions.pdb
+H:\SoftWeb\aktechaec.com\aktechaec.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\bin\vpro.functions.pdb
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\ChurchSfxparish\church.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb

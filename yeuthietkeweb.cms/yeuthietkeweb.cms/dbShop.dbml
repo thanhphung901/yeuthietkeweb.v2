@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dataweb_mau" Class="dbShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=dataweb_mau;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="database_mauConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="category_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="category_name" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Category_Product" Member="Products" ThisKey="category_id" OtherKey="category_id" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="product_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="product_name" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="category_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="product_new" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="product_hot" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="product_image" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="product_price" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Category_Product" Member="Category" ThisKey="category_id" OtherKey="category_id" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_AD_ITEM" Member="ESHOP_AD_ITEMs">
+    <Type Name="ESHOP_AD_ITEM">
+      <Column Name="AD_ITEM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AD_ITEM_CODE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AD_ITEM_FILENAME" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AD_ITEM_DESC" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AD_ITEM_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_HEIGHT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_WIDTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_CLICKCOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_URL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="AD_ITEM_PUBLISHDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AD_ITEM_DATEFROM" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AD_ITEM_DATETO" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AD_ITEM_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_POSITION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_TARGET" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AD_ITEM_COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AD_ITEM_FIELD1" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AD_ITEM_FIELD2" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AD_ITEM_FIELD3" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AD_ITEM_FIELD4" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AD_ITEM_FIELD5" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_AD_ITEM_CAT" Member="ESHOP_AD_ITEM_CATs">
+    <Type Name="ESHOP_AD_ITEM_CAT">
+      <Column Name="AD_ITEM_CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AD_ITEM_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ALBUM" Member="ESHOP_ALBUMs">
+    <Type Name="ESHOP_ALBUM">
+      <Column Name="ALBUM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ALBUM_NAME" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_DESC" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_ACTIVE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ALBUM_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_IMAGE1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_IMAGE2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_FIELD1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_FIELD2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_FIELD3" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_FIELD4" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ALBUM_FIELD5" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ALBUM_ITEM" Member="ESHOP_ALBUM_ITEMs">
+    <Type Name="ESHOP_ALBUM_ITEM">
+      <Column Name="ALBUM_ITEM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ALBUM_ITEM_DESC" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_IMAGE1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_IMAGE2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_IMAGE3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_URL" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_AUTOPLAY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_ORDER" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ALBUM_ITEM_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_AREA" Member="ESHOP_AREAs">
+    <Type Name="ESHOP_AREA">
+      <Column Name="AREA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AREA_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AREA_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="AREA_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AREA_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_PARENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_PARENT_PATH" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="AREA_PRIORITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_RANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_FIELD1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_FIELD2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AREA_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="AREA_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="AREA_SHIPPING_FEE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AREA_HOME_FEE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_BANNER" Member="ESHOP_BANNERs">
+    <Type Name="ESHOP_BANNER">
+      <Column Name="BANNER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BANNER_DESC" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BANNER_FILE" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="BANNER_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANNER_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANNER_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BANNER_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANNER_WIDTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANNER_HEIGHT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANNER_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BANNER_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BANNER_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BANNER_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BANNER_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_BASKET" Member="ESHOP_BASKETs">
+    <Type Name="ESHOP_BASKET">
+      <Column Name="BASKET_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUSTOMER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BASKET_PRICE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BASKET_QUANTITY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BASKET_PUBLISHDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="BASKET_UPDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="BASKET_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BASKET_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BASKET_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BASKET_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="BASKET_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CUSTOMER_OID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="BASKET_AMOUNT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_BASKET" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_CAT_IMG" Member="ESHOP_CAT_IMGs">
+    <Type Name="ESHOP_CAT_IMG">
+      <Column Name="CAT_IMG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CAT_IMG_NAME" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_CATEGORIES" Member="ESHOP_CATEGORies">
+    <Type Name="ESHOP_CATEGORy">
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CAT_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CAT_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_URL" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_TARGET" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CAT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ACCESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_POSITION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_SHOWFOOTER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_PARENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_PARENT_PATH" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_RANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ROWITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_PAGEITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_SHOWITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_PERIOD_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_SEO_TITLE" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_SEO_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_SEO_KEYWORD" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_SEO_URL" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_IMAGE1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_IMAGE2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_HISTORY" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CAT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_CODE_EN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CAT_NAME_EN" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_DESC_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_SEO_TITLE_EN" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CAT_SEO_DESC_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_SEO_KEYWORD_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_SEO_URL_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CAT_IMAGE3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="ESHOP_CATEGORy_ESHOP_GROUP_CAT" Member="ESHOP_GROUP_CATs" ThisKey="CAT_ID" OtherKey="CAT_ID" Type="ESHOP_GROUP_CAT" />
+      <Association Name="ESHOP_CATEGORy_ESHOP_NEWS_CAT" Member="ESHOP_NEWS_CATs" ThisKey="CAT_ID" OtherKey="CAT_ID" Type="ESHOP_NEWS_CAT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_CONFIG" Member="ESHOP_CONFIGs">
+    <Type Name="ESHOP_CONFIG">
+      <Column Name="CONFIG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONFIG_TITLE" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONFIG_KEYWORD" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CONFIG_DESCRIPTION" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CONFIG_HITCOUNTER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONFIG_FAVICON" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONFIG_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONFIG_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONFIG_TITLE_EN" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONFIG_KEYWORD_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CONFIG_DESCRIPTION_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_CONTACT" Member="ESHOP_CONTACTs">
+    <Type Name="ESHOP_CONTACT">
+      <Column Name="CONTACT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONTACT_NAME" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CONTACT_EMAIL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CONTACT_PHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTACT_ADDRESS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CONTACT_TITLE" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CONTACT_CONTENT" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CONTACT_ATT1" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONTACT_ATT2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONTACT_ATT3" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONTACT_ATT4" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONTACT_ATT5" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CONTACT_PUBLISHDATE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CONTACT_ANSWER" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CONTACT_SHOWTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONTACT_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_CUSTOMER" Member="ESHOP_CUSTOMERs">
+    <Type Name="ESHOP_CUSTOMER">
+      <Column Name="CUSTOMER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUSTOMER_FULLNAME" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_UN" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CUSTOMER_PW" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_SEX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUSTOMER_ADDRESS" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CUSTOMER_PHONE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_PHONE2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_EMAIL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CUSTOMER_NEWSLETTER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUSTOMER_FIELD1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_FIELD2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_FIELD3" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_FIELD4" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_FIELD5" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CUSTOMER_PUBLISHDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CUSTOMER_BIRTHDAY" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CUSTOMER_UPDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CUSTOMER_SHOWTYPE" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CUSTOMER_OID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CUSTOMER_TOTAL_POINT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUSTOMER_USED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUSTOMER_REMAIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUSTOMER_UPDATE_POINT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_EMAIL" Member="ESHOP_EMAILs">
+    <Type Name="ESHOP_EMAIL">
+      <Column Name="EMAIL_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMAIL_STT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMAIL_DESC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL_FROM" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL_TO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL_CC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL_BCC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_EXT_FILE" Member="ESHOP_EXT_FILEs">
+    <Type Name="ESHOP_EXT_FILE">
+      <Column Name="EXT_FILE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EXT_FILE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EXT_FILE_IMAGE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EXT_FILE_DESC" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_GIFT" Member="ESHOP_GIFTs">
+    <Type Name="ESHOP_GIFT">
+      <Column Name="GIFT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GIFT_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="GIFT_DESC" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GIFT_IMAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GIFT_POINT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIFT_AMOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIFT_MAX_AMOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIFT_CONTENT" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GIFT_PULISHDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_GROUP" Member="ESHOP_GROUPs">
+    <Type Name="ESHOP_GROUP">
+      <Column Name="GROUP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GROUP_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GROUP_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="GROUP_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_GROUP_ESHOP_GROUP_CAT" Member="ESHOP_GROUP_CATs" ThisKey="GROUP_ID" OtherKey="GROUP_ID" Type="ESHOP_GROUP_CAT" />
+      <Association Name="ESHOP_GROUP_ESHOP_USER" Member="ESHOP_USERs" ThisKey="GROUP_ID" OtherKey="GROUP_ID" Type="ESHOP_USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_GROUP_CAT" Member="ESHOP_GROUP_CATs">
+    <Type Name="ESHOP_GROUP_CAT">
+      <Column Name="GROUP_CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GROUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_CATEGORy_ESHOP_GROUP_CAT" Member="ESHOP_CATEGORy" ThisKey="CAT_ID" OtherKey="CAT_ID" Type="ESHOP_CATEGORy" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ESHOP_GROUP_ESHOP_GROUP_CAT" Member="ESHOP_GROUP" ThisKey="GROUP_ID" OtherKey="GROUP_ID" Type="ESHOP_GROUP" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_HITCOUNTER" Member="ESHOP_HITCOUNTERs">
+    <Type Name="ESHOP_HITCOUNTER">
+      <Column Name="HIT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HIT_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HIT_VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_MAIL_RECIVE" Member="ESHOP_MAIL_RECIVEs">
+    <Type Name="ESHOP_MAIL_RECIVE">
+      <Column Name="MAIL_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MAIL_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAIL_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS" Member="ESHOP_NEWs">
+    <Type Name="ESHOP_NEW">
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_CODE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEWS_TITLE" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_KEYWORD" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_URL" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_TITLE" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_FILEHTML" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NEWS_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NEWS_UPDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NEWS_URL" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_TARGET" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NEWS_SHOWTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_SHOWINDETAIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_FEEDBACKTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_PRINTTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ORDER_PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_IMAGE1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMAGE2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMAGE3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMAGE4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMAGE5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_FIELD2" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_SENDEMAIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_SENDDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NEWS_PRICE1" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="NEWS_PRICE2" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="NEWS_PRICE3" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UNIT_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT_ID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT_ID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_CODE_EN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEWS_TITLE_EN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_DESC_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_KEYWORD_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_DESC_EN" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_URL_EN" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_SEO_TITLE_EN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_PACKAGE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NEWS_PACKAGE_EN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NEWS_MATERIAL" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_MATERIAL_EN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_DIET" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_DIET_EN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NEWS_FILEHTML_EN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NEWS_KEYWORD_ASCII" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="NEWS_SOTRANG_THANG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_SONGUOISUDUNG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_KHOGIAY_TOIDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_TN_PRINT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_TH_FAX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_HANGXE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_LOAIXE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_BASKET" Member="ESHOP_BASKETs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_BASKET" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_ATT" Member="ESHOP_NEWS_ATTs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_ATT" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_CAT" Member="ESHOP_NEWS_CATs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_CAT" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_COMMENT" Member="ESHOP_NEWS_COMMENTs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_COMMENT" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_IMAGE" Member="ESHOP_NEWS_IMAGEs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_IMAGE" />
+      <Association Name="ESHOP_NEW_ESHOP_ORDER_ITEM" Member="ESHOP_ORDER_ITEMs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_ORDER_ITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_ATT" Member="ESHOP_NEWS_ATTs">
+    <Type Name="ESHOP_NEWS_ATT">
+      <Column Name="NEWS_ATT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ATT_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FILE" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_URL" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EXT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_ATT_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_ATT" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_CAT" Member="ESHOP_NEWS_CATs">
+    <Type Name="ESHOP_NEWS_CAT">
+      <Column Name="NEWS_CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_CATEGORy_ESHOP_NEWS_CAT" Member="ESHOP_CATEGORy" ThisKey="CAT_ID" OtherKey="CAT_ID" Type="ESHOP_CATEGORy" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_CAT" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_COMMENT" Member="ESHOP_NEWS_COMMENTs">
+    <Type Name="ESHOP_NEWS_COMMENT">
+      <Column Name="COMMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COMMENT_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="COMMENT_EMAIL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="COMMENT_CONTENT" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="COMMENT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="COMMENT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="COMMENT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMMENT_CHECK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_COMMENT" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_IMAGE" Member="ESHOP_NEWS_IMAGEs">
+    <Type Name="ESHOP_NEWS_IMAGE">
+      <Column Name="NEWS_IMG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_IMG_IMAGE1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMG_IMAGE2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMG_IMAGE3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMG_DESC" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="NEWS_IMG_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_IMG_SHOWTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_NEWS_IMAGE" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_NEWS" Member="ESHOP_NEWS_NEWs">
+    <Type Name="ESHOP_NEWS_NEW">
+      <Column Name="NEWS_NEWS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_NEWS_PROPERTIES" Member="ESHOP_NEWS_PROPERTies">
+    <Type Name="ESHOP_NEWS_PROPERTy">
+      <Column Name="NEWS_PROP_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROP_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ONLINE" Member="ESHOP_ONLINEs">
+    <Type Name="ESHOP_ONLINE">
+      <Column Name="ONLINE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ONLINE_NICKNAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ONLINE_DESC" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ONLINE_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ONLINE_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ONLINE_IMAGE" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ONLINE_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ONLINE_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ONLINE_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ONLINE_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ONLINE_DESC_EN" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ORDER" Member="ESHOP_ORDERs">
+    <Type Name="ESHOP_ORDER">
+      <Column Name="ORDER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUSTOMER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDER_TOTAL_ALL" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ORDER_PUBLISHDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ORDER_UPDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ORDER_NAME" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ORDER_ADDRESS" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ORDER_PHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDER_ADDRESS_PATH" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ORDER_EMAIL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ORDER_WEIGHT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ORDER_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ORDER_FIELD3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_FIELD4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CUSTOMER_OID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ORDER_PAYMENT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_BILL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_SHIPPING_FEE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ORDER_TOTAL_AMOUNT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="ESHOP_ORDER_ESHOP_ORDER_ITEM" Member="ESHOP_ORDER_ITEMs" ThisKey="ORDER_ID" OtherKey="ORDER_ID" Type="ESHOP_ORDER_ITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ORDER_ITEM" Member="ESHOP_ORDER_ITEMs">
+    <Type Name="ESHOP_ORDER_ITEM">
+      <Column Name="ITEM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ITEM_QUANTITY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ITEM_SUBTOTAL" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ITEM_PUBLISDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ITEM_UPDATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ITEM_PRICE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ITEM_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ITEM_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ITEM_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ITEM_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ITEM_FIELD6" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="ESHOP_NEW_ESHOP_ORDER_ITEM" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ESHOP_ORDER_ESHOP_ORDER_ITEM" Member="ESHOP_ORDER" ThisKey="ORDER_ID" OtherKey="ORDER_ID" Type="ESHOP_ORDER" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_PERMISSION" Member="ESHOP_PERMISSIONs">
+    <Type Name="ESHOP_PERMISSION">
+      <Column Name="PER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PER_NAME" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PER_URL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="PER_RANK" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PER_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PER_PARENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_POINT" Member="ESHOP_POINTs">
+    <Type Name="ESHOP_POINT">
+      <Column Name="POINT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="POINT_POINT_TO_MONEY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="POINT_MONEY_TO_POINT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="POINT_UPDATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="POINT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="POINT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="POINT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="POINT_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="POINT_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_PROPERTIES" Member="ESHOP_PROPERTies">
+    <Type Name="ESHOP_PROPERTy">
+      <Column Name="PROP_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROP_NAME" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PROP_DESC" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROP_PARENT_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PROP_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROP_RANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROP_SHIPPING_FEE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PROP_CODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROP_PARENT_PATH" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="PROP_PRIORITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_QUOTE_NEWS" Member="ESHOP_QUOTE_NEWs">
+    <Type Name="ESHOP_QUOTE_NEW">
+      <Column Name="QUO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QUO_EMAIL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="QUO_ACTIVE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="QUO_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_UNITS" Member="ESHOP_UNITs">
+    <Type Name="ESHOP_UNIT">
+      <Column Name="UNIT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UNIT_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIT_DESC" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_USER" Member="ESHOP_USERs">
+    <Type Name="ESHOP_USER">
+      <Column Name="USER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USER_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="USER_UN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USER_PW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GROUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USER_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USER_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SALT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USER_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_EMAIL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_ADDRESS" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_PHONE" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_ACTIVE_CODE" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ESHOP_GROUP_ESHOP_USER" Member="ESHOP_GROUP" ThisKey="GROUP_ID" OtherKey="GROUP_ID" Type="ESHOP_GROUP" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_USER_CAT" Member="ESHOP_USER_CATs">
+    <Type Name="ESHOP_USER_CAT">
+      <Column Name="USER_CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_USER_GIFT" Member="ESHOP_USER_GIFTs">
+    <Type Name="ESHOP_USER_GIFT">
+      <Column Name="USER_GIFT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUSTOMER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIFT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USER_GIFT_DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="USER_GIFT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USER_GIFT_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USER_GIFT_DESC" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FEILD" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FIELD4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="USER_GIFT_FIELD5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_WEBLINKS" Member="ESHOP_WEBLINKs">
+    <Type Name="ESHOP_WEBLINK">
+      <Column Name="WEBSITE_LINKS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WEBSITE_LINKS_NAME" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="WEBSITE_LINKS_URL" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="WEBSITE_LINKS_TARGET" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEBSITE_LINKS_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WEBSITE_LINKS_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="news_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="news_title" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="news_content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="news_image" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDER_CONTACT" Member="ORDER_CONTACTs">
+    <Type Name="ORDER_CONTACT">
+      <Column Name="ORDER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_USERNAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_EMAIL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_ADD" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_PHONE" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_REMARK" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="ODER_DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_BRAND" Member="ESHOP_BRANDs">
+    <Type Name="ESHOP_BRAND">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDERBY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IMAGE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGE2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGE3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">
+    <Parameter Name="strInput" Type="System.String" DbType="NVarChar(4000)" />
+    <Return Type="System.String" />
+  </Function>
+</Database>

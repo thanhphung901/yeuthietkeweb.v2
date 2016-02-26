@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: 'opensans-regular-webfont';
+	src: url(../fonts/opensans-regular-webfont.eot);
+	src: url(../fonts/opensans-regular-webfont.eot) format('embedded-opentype'), url(../fonts/opensans-regular-webfont.otf) format('otf'), url(../fonts/opensans-regular-webfont.woff) format('woff'), url(../fonts/opensans-regular-webfont.ttf) format('truetype'), url(../fonts/opensans-regular-webfont.svg) format('svg');
+	font-weight: 400 !important
+}
+@font-face {
+	font-family: 'Walsheim-Bold';
+	src: url(../fonts/UTMAvoBold.eot);
+	src: url(../fonts/UTMAvoBold.eot) format('embedded-opentype'), url(../fonts/UTMAvoBold.otf) format('otf'), url(../fonts/UTMAvoBold.woff) format('woff'), url(../fonts/UTMAvoBold.ttf) format('truetype'), url(../fonts/UTMAvoBold.svg) format('svg');
+	font-weight: 400 !important
+}
+ 
+ 
+ @font-face {
+	font-family: 'RobotoCondensedLight';
+	src: url(../fonts/RobotoCondensedLight.eot);
+	src: url(../fonts/RobotoCondensedLight.eot) format('embedded-opentype'), url(../fonts/RobotoCondensedLight.otf) format('otf'), url(../fonts/RobotoCondensedLight.woff) format('woff'), url(../fonts/RobotoCondensedLight.ttf) format('truetype'), url(../fonts/RobotoCondensedLight.svg) format('svg');
+	font-weight: 400 !important
+}
+
+@font-face {
+	font-family: 'RobotoCondensedRegular';
+	src: url(../fonts/RobotoCondensedRegular.eot);
+	src: url(../fonts/RobotoCondensedRegular.eot) format('embedded-opentype'), url(../fonts/RobotoCondensedRegular.otf) format('otf'), url(../fonts/RobotoCondensedRegular.woff) format('woff'), url(../fonts/RobotoCondensedRegular.ttf) format('truetype'), url(../fonts/RobotoCondensedRegular.svg) format('svg');
+	font-weight: 400 !important
+}
